@@ -1,0 +1,16 @@
+phantom:
+  address: HOST.com:443
+  header_http: "1.1"
+  headers:
+    - "[Host: HOST.com]"
+    - "[Connection: close]"    
+  uris:
+    - "/status.php"
+  load_profile:
+    load_type: rps
+    schedule: const(100,30m)
+  ssl: true
+console:
+  enabled: true
+telegraf:
+  enabled: false
